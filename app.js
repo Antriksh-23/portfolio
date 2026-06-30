@@ -545,6 +545,38 @@ const startApp = () => {
         });
     }
 
+    // Toggle Mobile Menu Overlay
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuCloseBtn = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    const openMobileMenu = () => {
+        if (mobileMenu) {
+            mobileMenu.classList.remove('translate-x-full');
+        }
+    };
+
+    const closeMobileMenu = () => {
+        if (mobileMenu) {
+            mobileMenu.classList.add('translate-x-full');
+        }
+    };
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+    }
+
+    if (mobileMenuCloseBtn) {
+        mobileMenuCloseBtn.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileNavLinks) {
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    }
+
     // Initialize 3D Bubble Cursor
     initBubbleCursor();
 };

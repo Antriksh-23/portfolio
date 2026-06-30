@@ -130,7 +130,7 @@
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-xl border-b border-primary/10 shadow-[0_0_20px_-5px_rgba(255,182,147,0.2)]">
-        <div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
             <div class="font-display-lg text-2xl font-bold text-primary tracking-tighter">ANTRIKSH</div>
             <div class="hidden md:flex gap-8 items-center">
                 <a class="text-primary font-bold font-body-md text-sm uppercase tracking-widest hover:text-secondary transition-all duration-300" href="#home">Home</a>
@@ -141,7 +141,28 @@
                 <a class="text-on-surface-variant/70 font-bold font-body-md text-sm uppercase tracking-widest hover:text-secondary transition-all duration-300" href="#certifications">Certifications</a>
                 <a class="text-on-surface-variant/70 font-bold font-body-md text-sm uppercase tracking-widest hover:text-secondary transition-all duration-300" href="#contact">Contact</a>
             </div>
-            <a class="bg-primary text-on-primary font-bold px-6 py-2 rounded-full hover:scale-105 active:scale-95 transition-all neon-glow-orange inline-block" href="https://drive.google.com/file/d/1QiY0It2vLEeFd-tqd-TkIVhGDSXYbzrV/view?usp=sharing" target="_blank">Resume</a>
+            <a class="hidden md:inline-block bg-primary text-on-primary font-bold px-6 py-2 rounded-full hover:scale-105 active:scale-95 transition-all neon-glow-orange" href="https://drive.google.com/file/d/1QiY0It2vLEeFd-tqd-TkIVhGDSXYbzrV/view?usp=sharing" target="_blank">Resume</a>
+            <button id="mobile-menu-btn" class="md:hidden text-primary hover:text-secondary focus:outline-none transition-colors p-1 flex items-center justify-center">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+            
+            <!-- Mobile Menu Overlay -->
+            <div id="mobile-menu" class="fixed inset-0 w-full h-screen bg-background/95 backdrop-blur-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col items-center justify-center gap-6 md:hidden">
+                <!-- Close Button -->
+                <button id="mobile-menu-close" class="absolute top-5 right-5 text-primary hover:text-secondary transition-colors focus:outline-none">
+                    <span class="material-symbols-outlined text-4xl">close</span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <a class="mobile-nav-link text-primary font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#home">Home</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#about">About</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#skills">Skills</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#portfolio">Projects</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#education">Education</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#certifications">Certifications</a>
+                <a class="mobile-nav-link text-on-surface-variant/70 font-bold font-body-md text-lg uppercase tracking-widest hover:text-secondary transition-all" href="#contact">Contact</a>
+                <a class="bg-primary text-on-primary font-bold px-8 py-3 rounded-full hover:scale-105 active:scale-95 transition-all neon-glow-orange mt-4 inline-block text-center w-48" href="https://drive.google.com/file/d/1QiY0It2vLEeFd-tqd-TkIVhGDSXYbzrV/view?usp=sharing" target="_blank">Resume</a>
+            </div>
         </div>
     </nav>
 
@@ -175,9 +196,9 @@
     <main class="relative z-10">
         
         <!-- About Section -->
-        <section class="pb-section-gap pt-12 px-margin-desktop" id="about">
+        <section class="pb-section-gap pt-12 px-margin-mobile md:px-margin-desktop" id="about">
             <div class="max-w-container-max mx-auto">
-                <div class="glass-card p-12 rounded-xl border-tertiary-container/30 relative overflow-hidden neon-glow-pink">
+                <div class="glass-card p-6 md:p-12 rounded-xl border-tertiary-container/30 relative overflow-hidden neon-glow-pink">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-tertiary-container/10 blur-3xl rounded-full"></div>
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <div>
@@ -196,8 +217,8 @@
         </section>
 
         <!-- Skills Section -->
-        <section class="py-section-gap px-margin-desktop reveal" id="skills">
-            <div class="max-w-container-max mx-auto section-blur-backdrop p-8 rounded-2xl">
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="skills">
+            <div class="max-w-container-max mx-auto section-blur-backdrop p-6 md:p-8 rounded-2xl">
                 <div class="text-center mb-16">
                     <h2 class="font-display-lg text-headline-md text-white mb-4">Skills</h2>
                     <p class="font-code-sm text-secondary uppercase tracking-widest mb-4">Tools and concepts I work with.</p>
@@ -205,7 +226,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <!-- Frontend -->
-                    <div class="glass-card p-8 rounded-xl hover:translate-y-[-10px] hover:border-secondary/50 hover:neon-glow-blue transition-all duration-500 group">
+                    <div class="glass-card p-6 md:p-8 rounded-xl hover:translate-y-[-10px] hover:border-secondary/50 hover:neon-glow-blue transition-all duration-500 group">
                         <span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">terminal</span>
                         <h3 class="font-headline-md text-lg text-white mb-4">Frontend Development</h3>
                         <ul class="font-code-sm text-on-surface-variant/80 space-y-2">
@@ -217,7 +238,7 @@
                         </ul>
                     </div>
                     <!-- Backend -->
-                    <div class="glass-card p-8 rounded-xl hover:translate-y-[-10px] hover:border-primary/50 hover:neon-glow-orange transition-all duration-500 group">
+                    <div class="glass-card p-6 md:p-8 rounded-xl hover:translate-y-[-10px] hover:border-primary/50 hover:neon-glow-orange transition-all duration-500 group">
                         <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">database</span>
                         <h3 class="font-headline-md text-lg text-white mb-4">Backend Development</h3>
                         <ul class="font-code-sm text-on-surface-variant/80 space-y-2">
@@ -228,7 +249,7 @@
                         </ul>
                     </div>
                     <!-- Database -->
-                    <div class="glass-card p-8 rounded-xl hover:translate-y-[-10px] hover:border-tertiary/50 hover:neon-glow-pink transition-all duration-500 group">
+                    <div class="glass-card p-6 md:p-8 rounded-xl hover:translate-y-[-10px] hover:border-tertiary/50 hover:neon-glow-pink transition-all duration-500 group">
                         <span class="material-symbols-outlined text-tertiary text-4xl mb-4 group-hover:scale-110 transition-transform">storage</span>
                         <h3 class="font-headline-md text-lg text-white mb-4">Databases</h3>
                         <ul class="font-code-sm text-on-surface-variant/80 space-y-2">
@@ -238,7 +259,7 @@
                         </ul>
                     </div>
                     <!-- Programming -->
-                    <div class="glass-card p-8 rounded-xl hover:translate-y-[-10px] hover:border-secondary/50 hover:neon-glow-blue transition-all duration-500 group">
+                    <div class="glass-card p-6 md:p-8 rounded-xl hover:translate-y-[-10px] hover:border-secondary/50 hover:neon-glow-blue transition-all duration-500 group">
                         <span class="material-symbols-outlined text-secondary text-4xl mb-4 group-hover:scale-110 transition-transform">code</span>
                         <h3 class="font-headline-md text-lg text-white mb-4">Data Analytics &amp; Visualization</h3>
                         <ul class="font-code-sm text-on-surface-variant/80 space-y-2">
@@ -250,7 +271,7 @@
                         </ul>
                     </div>
                     <!-- Tools -->
-                    <div class="glass-card p-8 rounded-xl hover:translate-y-[-10px] hover:border-primary/50 hover:neon-glow-orange transition-all duration-500 group">
+                    <div class="glass-card p-6 md:p-8 rounded-xl hover:translate-y-[-10px] hover:border-primary/50 hover:neon-glow-orange transition-all duration-500 group">
                         <span class="material-symbols-outlined text-primary text-4xl mb-4 group-hover:scale-110 transition-transform">build</span>
                         <h3 class="font-headline-md text-lg text-white mb-4">Tools &amp; Concepts</h3>
                         <ul class="font-code-sm text-on-surface-variant/80 space-y-2">
@@ -265,8 +286,8 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="py-section-gap px-margin-desktop reveal" id="portfolio">
-            <div class="max-w-container-max mx-auto section-blur-backdrop p-8 rounded-2xl">
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="portfolio">
+            <div class="max-w-container-max mx-auto section-blur-backdrop p-6 md:p-8 rounded-2xl">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
                         <h2 class="font-display-lg text-headline-md text-white mb-2">Projects</h2>
@@ -282,15 +303,21 @@
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                         </div>
-                        <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="p-6 md:p-8 flex-grow flex flex-col justify-between">
                             <div>
                                 <h3 class="font-headline-md text-2xl text-white mb-4">End-to-End Data Analytics Workflow</h3>
                                 <p class="font-body-md text-on-surface-variant/70 mb-6">Cleaned and processed raw datasets using Python. Managed data storage in a relational database and performed analysis using SQL. Built a Power BI dashboard to visualize key business metrics.</p>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Python (Pandas)</span>
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">SQL (PostgreSQL)</span>
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Power BI</span>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Python (Pandas)</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">SQL (PostgreSQL)</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Power BI</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/Antriksh-23" target="_blank" class="flex-1 py-2 px-4 bg-primary/20 text-primary border border-primary/30 rounded-lg text-center font-bold text-sm hover:bg-primary hover:text-black transition-all flex items-center justify-center gap-1">Code <span class="material-symbols-outlined text-sm">code</span></a>
+                                    <a href="#" class="flex-1 py-2 px-4 bg-white/5 text-white/80 border border-white/10 rounded-lg text-center font-bold text-sm hover:bg-white/10 hover:text-white transition-all flex items-center justify-center gap-1">Live <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -302,16 +329,22 @@
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                         </div>
-                        <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="p-6 md:p-8 flex-grow flex flex-col justify-between">
                             <div>
                                 <h3 class="font-headline-md text-2xl text-white mb-4">Sports Celebrity Image Classifier</h3>
                                 <p class="font-body-md text-on-surface-variant/70 mb-6">Built a full-stack ML application to classify athlete images. Implemented OpenCV for preprocessing and Scikit-Learn for model training. Deployed a responsive web interface via Flask API for real-time results.</p>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Python</span>
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">OpenCV</span>
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Scikit-Learn</span>
-                                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Flask</span>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Python</span>
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">OpenCV</span>
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Scikit-Learn</span>
+                                    <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-xs font-code-sm">Flask</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/Antriksh-23" target="_blank" class="flex-1 py-2 px-4 bg-secondary/20 text-secondary border border-secondary/30 rounded-lg text-center font-bold text-sm hover:bg-secondary hover:text-black transition-all flex items-center justify-center gap-1">Code <span class="material-symbols-outlined text-sm">code</span></a>
+                                    <a href="#" class="flex-1 py-2 px-4 bg-white/5 text-white/80 border border-white/10 rounded-lg text-center font-bold text-sm hover:bg-white/10 hover:text-white transition-all flex items-center justify-center gap-1">Live <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -323,16 +356,22 @@
                             </div>
                             <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                         </div>
-                        <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div class="p-6 md:p-8 flex-grow flex flex-col justify-between">
                             <div>
                                 <h3 class="font-headline-md text-2xl text-white mb-4">DeepDecode: Multimodal RAG Video Intelligence</h3>
                                 <p class="font-body-md text-on-surface-variant/70 mb-6">Built a tool to search and query video content using AI-driven transcription. Integrated Whisper Large v3 and implemented hierarchical chunking for vector retrieval. Designed a React/FastAPI app delivering video timestamps.</p>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">DeepSeek-R1</span>
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Whisper v3</span>
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">FastAPI</span>
-                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">React</span>
+                            <div>
+                                <div class="flex flex-wrap gap-2 mb-6">
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">DeepSeek-R1</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">Whisper v3</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">FastAPI</span>
+                                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-code-sm">React</span>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="https://github.com/Antriksh-23" target="_blank" class="flex-1 py-2 px-4 bg-primary/20 text-primary border border-primary/30 rounded-lg text-center font-bold text-sm hover:bg-primary hover:text-black transition-all flex items-center justify-center gap-1">Code <span class="material-symbols-outlined text-sm">code</span></a>
+                                    <a href="#" class="flex-1 py-2 px-4 bg-white/5 text-white/80 border border-white/10 rounded-lg text-center font-bold text-sm hover:bg-white/10 hover:text-white transition-all flex items-center justify-center gap-1">Live <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -341,19 +380,19 @@
         </section>
 
         <!-- Education Section -->
-        <section class="py-section-gap px-margin-desktop reveal overflow-hidden" id="education">
-            <div class="max-w-4xl mx-auto section-blur-backdrop p-8 rounded-2xl">
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal overflow-hidden" id="education">
+            <div class="max-w-4xl mx-auto section-blur-backdrop p-6 md:p-8 rounded-2xl">
                 <div class="text-center mb-16">
                     <h2 class="font-display-lg text-headline-md text-white mb-4">Education</h2>
                     <p class="font-code-sm text-tertiary uppercase">Academic Log History</p>
                 </div>
-                <div class="relative border-l md:border-l-0 border-white/10 ml-6 md:ml-0">
-                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+                <div class="relative border-l-2 border-white/10 md:border-l-0 ml-4 md:ml-0">
+                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/10 -translate-x-1/2"></div>
                     
                     <!-- Education 1: B.Tech -->
-                    <div class="mb-12 relative md:flex md:justify-end md:pr-12">
-                        <div class="absolute -left-[31px] md:left-auto md:-right-3 w-6 h-6 rounded-full bg-primary neon-glow-orange border-4 border-black z-10"></div>
-                        <div class="ml-4 md:ml-0 md:w-1/2 md:text-right">
+                    <div class="mb-12 relative md:flex md:justify-end md:pr-12 pl-8 md:pl-0">
+                        <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-primary neon-glow-orange border-4 border-black z-10 -translate-x-1/2 top-1.5"></div>
+                        <div class="md:w-[calc(50%-24px)] md:text-right">
                             <div class="glass-card p-6 rounded-xl hover:border-primary/40 transition-colors">
                                 <span class="font-code-sm text-primary mb-2 block">2022 — 2026</span>
                                 <h3 class="font-headline-md text-xl text-white mb-2">Computer Science and Engineering (Specialization in Data Science)</h3>
@@ -364,9 +403,9 @@
                     </div>
                     
                     <!-- Education 2: Class XII -->
-                    <div class="mb-12 relative md:flex md:justify-start md:pl-12">
-                        <div class="absolute -left-[31px] md:-left-3 w-6 h-6 rounded-full bg-secondary neon-glow-blue border-4 border-black z-10"></div>
-                        <div class="ml-4 md:ml-0 md:w-1/2">
+                    <div class="mb-12 relative md:flex md:justify-start md:pl-12 pl-8 md:pl-0">
+                        <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-secondary neon-glow-blue border-4 border-black z-10 -translate-x-1/2 top-1.5"></div>
+                        <div class="md:w-[calc(50%-24px)]">
                             <div class="glass-card p-6 rounded-xl hover:border-secondary/40 transition-colors">
                                 <span class="font-code-sm text-secondary mb-2 block">2021 — 2022</span>
                                 <h3 class="font-headline-md text-xl text-white mb-2">Class XII</h3>
@@ -377,9 +416,9 @@
                     </div>
                     
                     <!-- Education 3: Class X -->
-                    <div class="mb-12 relative md:flex md:justify-end md:pr-12">
-                        <div class="absolute -left-[31px] md:left-auto md:-right-3 w-6 h-6 rounded-full bg-tertiary neon-glow-pink border-4 border-black z-10"></div>
-                        <div class="ml-4 md:ml-0 md:w-1/2 md:text-right">
+                    <div class="mb-12 relative md:flex md:justify-end md:pr-12 pl-8 md:pl-0">
+                        <div class="absolute left-0 md:left-1/2 w-6 h-6 rounded-full bg-tertiary neon-glow-pink border-4 border-black z-10 -translate-x-1/2 top-1.5"></div>
+                        <div class="md:w-[calc(50%-24px)] md:text-right">
                             <div class="glass-card p-6 rounded-xl hover:border-tertiary/40 transition-colors">
                                 <span class="font-code-sm text-tertiary mb-2 block">2019 — 2020</span>
                                 <h3 class="font-headline-md text-xl text-white mb-2">Class X</h3>
@@ -393,15 +432,15 @@
         </section>
 
         <!-- Certifications Section -->
-        <section class="py-section-gap px-margin-desktop reveal" id="certifications">
-            <div class="max-w-container-max mx-auto section-blur-backdrop p-8 rounded-2xl">
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="certifications">
+            <div class="max-w-container-max mx-auto section-blur-backdrop p-6 md:p-8 rounded-2xl">
                 <div class="text-center mb-16">
                     <h2 class="font-display-lg text-headline-md text-white mb-4">Certifications</h2>
                     <p class="font-code-sm text-secondary uppercase tracking-widest">Verified Technical Credentials</p>
                     <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mt-4"></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="glass-card p-8 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 group flex flex-col">
+                    <div class="glass-card p-6 md:p-8 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 group flex flex-col">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-orange transition-all">
                                 <span class="material-symbols-outlined text-primary">analytics</span>
@@ -411,7 +450,7 @@
                         <p class="font-body-md text-on-surface-variant/70 mb-8 flex-grow">Completion in Data Science by CodeWithHarry, demonstrating practical skills in data analysis, modeling, and using industry-standard tools to solve real-world problems.</p>
                         <a class="w-full py-3 bg-primary text-black rounded-lg font-bold flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform" href="https://drive.google.com/file/d/1WyeDaa6yhBAfhTMfXgcl11dm5ibTlnHd/view?usp=sharing" target="_blank">Certificate <span class="material-symbols-outlined text-sm">verified</span></a>
                     </div>
-                    <div class="glass-card p-8 rounded-xl border-secondary/20 hover:border-secondary/60 hover:neon-glow-blue transition-all duration-500 group flex flex-col">
+                    <div class="glass-card p-6 md:p-8 rounded-xl border-secondary/20 hover:border-secondary/60 hover:neon-glow-blue transition-all duration-500 group flex flex-col">
                         <div class="flex items-center gap-4 mb-6">
                             <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-blue transition-all">
                                 <span class="material-symbols-outlined text-secondary">terminal</span>
@@ -426,15 +465,15 @@
         </section>
 
         <!-- Contact Section -->
-        <section class="py-section-gap px-margin-desktop reveal" id="contact">
-            <div class="max-w-container-max mx-auto section-blur-backdrop p-8 rounded-2xl">
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="contact">
+            <div class="max-w-container-max mx-auto section-blur-backdrop p-6 md:p-8 rounded-2xl">
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div>
                         <h2 class="font-display-lg text-headline-md text-white mb-6">Initialize Communication</h2>
                         <p class="font-body-lg text-on-surface-variant mb-12">Ready to architect the future? Reach out through any of the secure channels below.</p>
                         <div class="space-y-6">
                             <!-- Phone Card -->
-                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 w-full max-w-md" href="tel:+916398194202">
+                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 w-full max-w-md mx-auto md:mx-0" href="tel:+916398194202">
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-orange transition-all">
                                         <span class="material-symbols-outlined text-primary">call</span>
@@ -446,7 +485,7 @@
                                 <span class="material-symbols-outlined text-primary/40 group-hover:text-primary transition-all group-hover:translate-x-1">arrow_forward</span>
                             </a>
                             <!-- LinkedIn Card -->
-                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-secondary/20 hover:border-secondary/60 hover:neon-glow-blue transition-all duration-500 w-full max-w-md" href="https://www.linkedin.com/in/antrikshgupta/" target="_blank">
+                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-secondary/20 hover:border-secondary/60 hover:neon-glow-blue transition-all duration-500 w-full max-w-md mx-auto md:mx-0" href="https://www.linkedin.com/in/antrikshgupta/" target="_blank">
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-blue transition-all">
                                         <span class="material-symbols-outlined text-secondary">link</span>
@@ -458,7 +497,7 @@
                                 <span class="material-symbols-outlined text-secondary/40 group-hover:text-secondary transition-all group-hover:translate-x-1">arrow_forward</span>
                             </a>
                             <!-- GitHub Card -->
-                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-tertiary/20 hover:border-tertiary/60 hover:neon-glow-pink transition-all duration-500 w-full max-w-md" href="https://github.com/Antriksh-23?tab=repositories" target="_blank">
+                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-tertiary/20 hover:border-tertiary/60 hover:neon-glow-pink transition-all duration-500 w-full max-w-md mx-auto md:mx-0" href="https://github.com/Antriksh-23?tab=repositories" target="_blank">
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-pink transition-all">
                                         <span class="material-symbols-outlined text-tertiary">code</span>
@@ -470,7 +509,7 @@
                                 <span class="material-symbols-outlined text-tertiary/40 group-hover:text-tertiary transition-all group-hover:translate-x-1">arrow_forward</span>
                             </a>
                             <!-- Email Card -->
-                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 w-full max-w-md" href="mailto:antriksh23gupta@gmail.com">
+                            <a class="flex items-center justify-between gap-4 group glass-card p-4 rounded-xl border-primary/20 hover:border-primary/60 hover:neon-glow-orange transition-all duration-500 w-full max-w-md mx-auto md:mx-0" href="mailto:antriksh23gupta@gmail.com">
                                 <div class="flex items-center gap-4">
                                     <div class="w-12 h-12 glass-card rounded-full flex items-center justify-center group-hover:neon-glow-orange transition-all">
                                         <span class="material-symbols-outlined text-primary">mail</span>
@@ -491,7 +530,7 @@
 
     <!-- Footer -->
     <footer class="w-full bg-background border-t border-secondary/10 relative z-10 transition-opacity duration-500 py-12">
-        <div class="flex flex-col items-center justify-center gap-unit px-margin-desktop max-w-container-max mx-auto">
+        <div class="flex flex-col items-center justify-center gap-unit px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <button id="btn-return-to-surface" class="mb-8 group flex flex-col items-center gap-2 transition-all duration-300 hover:scale-110">
                 <span class="material-symbols-outlined text-secondary text-4xl neon-glow-blue rounded-full p-2 border border-secondary/20 group-hover:border-secondary/50 transition-all">keyboard_double_arrow_up</span>
                 <span class="font-code-sm text-secondary text-xs uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">Return to Surface</span>
