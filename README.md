@@ -2,6 +2,12 @@
 
 A modern, immersive, and responsive developer portfolio built with **HTML, CSS, JavaScript, Tailwind CSS, and GSAP**. This portfolio goes beyond a traditional website by combining cinematic animations, smooth interactions, and a futuristic UI to create an engaging user experience.
 
+## 🌐 Live Demo
+
+**🔗 Portfolio Website:** https://antriksh-23.github.io/portfolio/
+
+---
+
 ## ✨ Features
 
 * 🎬 **Cinematic Hero Animation**
@@ -22,9 +28,8 @@ A modern, immersive, and responsive developer portfolio built with **HTML, CSS, 
   * GSAP powered transitions
   * Scroll reveal effects
   * Animated loading screen
-  * Interactive hover effects
 
-* 🖱️ **Custom Cursor**
+* 🖱️ **Interactive Cursor**
 
   * 3D bubble cursor effect
   * Dynamic particle animations
@@ -33,41 +38,27 @@ A modern, immersive, and responsive developer portfolio built with **HTML, CSS, 
 * 📱 **Responsive Design**
 
   * Desktop, tablet, and mobile optimized
-  * Mobile navigation menu
-  * Adaptive typography and layouts
 
 * 📂 **Portfolio Sections**
 
-  * Hero Landing Page
-  * About Me
+  * Home
+  * About
   * Skills
   * Projects
-  * Education Timeline
+  * Education
   * Certifications
-  * Contact Information
+  * Contact
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
 * HTML5
 * CSS3
 * JavaScript (ES6)
-
-### Libraries
-
+* Tailwind CSS
 * GSAP
 * GSAP ScrollTo Plugin
-* Tailwind CSS
-
-### Design
-
-* Glassmorphism
-* Custom Animations
-* Responsive UI
-* Modern Typography
 
 ---
 
@@ -90,21 +81,13 @@ Portfolio/
 
 ## 🚀 Getting Started
 
-1. Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/Antriksh-23/portfolio.git
 ```
 
-2. Navigate to the project folder
-
-```bash
-cd portfolio
-```
-
-3. Open `index.html` in your browser.
-
-Or use the VS Code Live Server extension for the best experience.
+Open the project folder and launch `index.html` using your browser or VS Code Live Server.
 
 ---
 
@@ -112,35 +95,27 @@ Or use the VS Code Live Server extension for the best experience.
 
 > Add screenshots or a GIF of your portfolio here.
 
-Example:
-
-```markdown
-![Home](images/home.png)
-![Projects](images/projects.png)
-```
-
 ---
 
 ## 🎯 Highlights
 
-* Premium animated landing page
-* Interactive scroll experience
-* High-performance canvas animations
-* Custom particle cursor
-* Modern cyberpunk aesthetic
-* Smooth page navigation
+* Premium cinematic landing page
+* 194-frame scroll animation
+* Glassmorphism UI
+* Neon cyberpunk design
+* Interactive bubble cursor
 * Responsive across all devices
+* Smooth GSAP-powered navigation
 
 ---
 
 ## 🔮 Future Improvements
 
-* Dark/Light mode toggle
+* Dark/Light mode
 * Blog section
-* Project filtering
-* Contact form with EmailJS
+* Contact form integration
 * Performance optimization
-* Three.js 3D integration
+* Three.js 3D elements
 
 ---
 
@@ -148,6 +123,7 @@ Example:
 
 **Antriksh Gupta**
 
+* 🌐 Portfolio: https://antriksh-23.github.io/portfolio/
 * GitHub: https://github.com/Antriksh-23
 * LinkedIn: https://www.linkedin.com/in/antrikshgupta/
 
@@ -155,4 +131,4 @@ Example:
 
 ## ⭐ Support
 
-If you like this project, consider giving it a ⭐ on GitHub!
+If you enjoyed this project, don't forget to **⭐ Star** the repository. Your support helps and is greatly appreciated!
